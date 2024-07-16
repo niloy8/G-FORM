@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f1f3;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.menu i {
+    margin-left: 12px;
+    color: #a5a6a7;
+    cursor: pointer;
+}
+
+.hello {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    gap: 5px;
+
+}
+
+.other-google-application svg {
+    width: 20px;
+    height: auto;
+    color: #a5a6a7;
+    cursor: pointer;
+}
+
+.form-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.form-icon img {
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+}
+
+.form-icon span {
+    font-size: 20px;
+    color: #5f6368;
+    opacity: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.search input {
+    width: 450px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ebedeeb4;
+    padding: 5px 55px;
+    border: none;
+
+}
+
+
+.search {
+    position: relative;
+
+}
+
+.search input:focus {
+    background-color: white;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.651);
+    outline: none;
+}
+
+.search i.fa-search {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    z-index: 1;
+    font-size: 14px;
+    cursor: pointer;
+    color: #8a8c8d;
+}
+
+
+/* CREATING NEW FORM SECTION*/
+
+.new-form {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.new-form img {
+    width: 140px;
+    height: fit-content;
+}
+
+.new-form span {
+    margin-left: 5px;
+    color: rgba(14, 13, 13, 0.712);
+    font-size: medium;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
+
+.new-form p {
+    color: rgba(14, 13, 13, 0.877);
+    font-size: small;
+    margin-top: 10px;
+    font-weight: 100;
+    margin-left: 5px;
+}
+
+.new-form img:hover {
+    outline: 1px solid rgba(61, 61, 233, 0.699);
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
