@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../Images/forms_2020q4_48dp.png" type="image/x-icon">
     <title>GFORM</title>
 </head>
 
@@ -15,6 +16,10 @@
     <header>
         <div class="form">
             <div class="menu">
+                <!-- creating side bars -->
+                <div class="side-bar-1">
+                    <h4>Gform</h4>
+                </div>
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="form-icon">
@@ -38,6 +43,9 @@
 
 
                 </svg>
+                <div class="bar-2">
+                    <h5>hello</h5>
+                </div>
             </div>
             <div>
                 <img src="../Images/image.png" alt="">
@@ -50,9 +58,48 @@
     <!-- Creating new form  -->
     <section class="new-form">
         <span>Start a new form</span>
-        <img src="../Images/forms-blank-googlecolors.png" alt="">
+        <a href="http://127.0.0.1:5500/Html/form.html"><img src="../Images/forms-blank-googlecolors.png" alt=""></a>
         <p>Blank form</p>
     </section>
+
+    <!-- Recent Created forms -->
+    <div class="recent-form">
+        <section class="recently-created-forms">
+            <div>
+                <span>Recent forms</span>
+            </div>
+            <div class="modification">
+                <select name="owner" id="owned">
+                    <option value="owned by everyone">
+                        Owned by everyone
+                    </option>
+                    <option value="owned by everyone">
+                        Owned by me
+                    </option>
+                    <option value="owned by everyone">
+                        Not owned by me
+                    </option>
+                </select>
+                <!-- <i class="fa-solid fa-table-cells"></i> -->
+                <div class="list">
+                    <i class="fa-solid fa-list"></i>
+
+                    <div class="modified">
+                        <i class="fa-solid fa-caret-up"></i>
+                        <span>A Z</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+        </section>
+    </div>
+
+
+
 </body>
 
 </html>

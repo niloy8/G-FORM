@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f1f3;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+
+
+.hello {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    gap: 5px;
+
+}
+
+.other-google-application svg {
+    width: 20px;
+    height: auto;
+    color: #a5a6a7;
+    cursor: pointer;
+}
+
+.form-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+
+.form-icon a {
+    text-decoration: none;
+}
+
+.form-icon img {
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+}
+
+.form-icon span {
+    font-size: 20px;
+    color: #5f6368;
+    opacity: 1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* creating a form */
+.container {
+    background: #a09c9c52;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.create-form {
+    background: white;
+    width: 40%;
+    margin-top: 20px;
+    padding: 3%;
+}
+
+.create-form h3 {
+    font-size: medium;
+    color: #653fa3;
+}

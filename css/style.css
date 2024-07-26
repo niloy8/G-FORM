@@ -90,7 +90,7 @@ header {
     position: absolute;
     top: 14px;
     left: 20px;
-    z-index: 1;
+
     font-size: 14px;
     cursor: pointer;
     color: #8a8c8d;
@@ -107,9 +107,12 @@ header {
     padding: 20px 0;
 }
 
+.new-form a {
+    width: 140px;
+}
+
 .new-form img {
     width: 140px;
-    height: fit-content;
 }
 
 .new-form span {
@@ -130,6 +133,105 @@ header {
 
 .new-form img:hover {
     outline: 1px solid rgba(61, 61, 233, 0.699);
-    transition-duration: 0.2s;
     cursor: pointer;
+}
+
+/* recently-created-forms */
+.recent-form {
+    background-color: #ffffff;
+    margin-top: 15px;
+    height: 100%;
+    background-size: contain;
+}
+
+.recently-created-forms {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.modification {
+    display: flex;
+    margin-left: 38%;
+    color: #7c7f83;
+}
+
+.modified {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.modified span {
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    cursor: pointer;
+
+}
+
+.list i {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.modified>i:first-child {
+    position: absolute;
+    top: 5px;
+    font-size: 8px;
+
+}
+
+.modified>i:last-child {
+    position: absolute;
+    top: 18px;
+    font-size: 8px;
+}
+
+.modified:hover {
+    background-color: #cfd0d3;
+    transition: 0.3s;
+}
+
+.list {
+    display: flex;
+    margin-left: 100px;
+    align-items: center;
+    width: 100px;
+    height: auto;
+    justify-content: space-evenly;
+}
+
+#owned {
+    border: none;
+}
+
+/* Creating sidebar */
+
+.side-bar-1 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.bar-2 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    top: 50px;
+    right: 0;
+    padding: 10px;
+    visibility: hidden;
 }
