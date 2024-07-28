@@ -5,6 +5,7 @@
 
 body {
     background-color: #f0f1f3;
+
 }
 
 .form {
@@ -71,7 +72,6 @@ header {
     background-color: #ebedeeb4;
     padding: 5px 55px;
     border: none;
-
 }
 
 
@@ -140,7 +140,7 @@ header {
 .recent-form {
     background-color: #ffffff;
     margin-top: 15px;
-    height: 100%;
+
     background-size: contain;
 }
 

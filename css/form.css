@@ -12,7 +12,7 @@ body {
     align-items: center;
 }
 
-header {
+.form-header {
     display: flex;
     background-color: white;
     justify-content: space-between;
@@ -21,6 +21,9 @@ header {
 
 }
 
+header {
+    background-color: white;
+}
 
 
 .hello {
@@ -64,22 +67,87 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 5px;
+
+}
+
+.links h5 {
+    font-size: 12px;
+    font-weight: 100;
+    color: #5f6368;
+    cursor: pointer;
+}
+
 /* creating a form */
 .container {
     background: #a09c9c52;
     height: 100vh;
     display: flex;
     justify-content: center;
+
 }
 
 .create-form {
     background: white;
-    width: 40%;
+    width: 55%;
+    height: max-content;
     margin-top: 20px;
-    padding: 3%;
+    padding: 2%;
+    position: relative;
+    border-radius: 10px;
 }
+
 
 .create-form h3 {
     font-size: medium;
-    color: #653fa3;
+    position: relative;
+
+}
+
+.create-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #673ab7;
+    z-index: 22;
+    border-radius: 7px 7px 0 0;
+
+}
+
+.create-form::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background-color: #4285f4;
+    border-radius: 10px 0 0 10px;
+    visibility: hidden;
+}
+
+
+.form-description {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-description input {
+    border: none;
+    border-bottom: 1px solid rgba(134, 130, 130, 0.459);
+    margin: 15px 0;
+    margin-bottom: 5px;
+}
+
+.form-description input:focus {
+    outline: none;
+
 }
