@@ -156,7 +156,7 @@ header {
 
 .form-description input:first-child {
     font-size: 30px;
-    padding: 5px;
+    padding-bottom: 10px;
 }
 
 .form-description input:focus {
