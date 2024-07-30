@@ -60,11 +60,17 @@ header {
     cursor: pointer;
 }
 
-.form-icon span {
+.form input {
+    margin-left: 20px;
     font-size: 20px;
     color: #5f6368;
     opacity: 1;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: none;
+}
+
+.form input:focus {
+    outline: none;
 }
 
 .links {
@@ -145,9 +151,17 @@ header {
     border-bottom: 1px solid rgba(134, 130, 130, 0.459);
     margin: 15px 0;
     margin-bottom: 5px;
+
+}
+
+.form-description input:first-child {
+    font-size: 30px;
+    padding: 5px;
 }
 
 .form-description input:focus {
     outline: none;
-
 }
+
+
+/* Creating title dynamically */
