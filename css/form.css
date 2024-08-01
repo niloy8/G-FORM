@@ -91,10 +91,10 @@ header {
 /* creating a form */
 .container {
     background: #a09c9c52;
-    height: 100vh;
     display: flex;
-    justify-content: center;
-
+    align-items: center;
+    flex-direction: column;
+    height: 100vw;
 }
 
 .create-form {
@@ -139,6 +139,17 @@ header {
     visibility: hidden;
 }
 
+.form-description::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background-color: #4285f4;
+    border-radius: 10px 0 0 10px;
+    visibility: hidden;
+}
 
 .form-description {
     display: flex;
@@ -161,7 +172,34 @@ header {
 
 .form-description input:focus {
     outline: none;
+    border-bottom: 2px solid #673ab7;
+
+    transition: border-bottom 1s ease-in-out;
+    /* animation: border-grow 400ms ease-in-out; */
 }
 
 
-/* Creating title dynamically */
+
+/* creating dynamic sidebar */
+.question-section::before {
+    content: '';
+    background: none;
+}
+
+
+
+.question-focused::after {
+    visibility: visible;
+}
+
+.create-form:focus-within::after {
+    visibility: visible;
+}
+
+.focused::after {
+    visibility: visible;
+}
+
+/* Creating title underline dynamically */
+
+.title-underline {}

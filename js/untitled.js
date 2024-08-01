@@ -4,7 +4,7 @@ const form = document.querySelector('.form input')
 const title = "Untitled Form"
 form.value = title
 const formInput = document.querySelector('.form-description input')
-console.log(formInput);
+
 formInput.value = form.value
 
 const handleFoucsChange = e => {
