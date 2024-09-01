@@ -17,7 +17,8 @@ const handleDaynamicDiv = (e) => {
 const handleBlur = (ev) => {
     if (isFocused) {
         const pClassname = ev.target.nextSibling
-        pClassname.style.display = 'none'
+
+        p.style.display = 'none'
         isFocused = false
     }
 }
