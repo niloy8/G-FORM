@@ -213,3 +213,30 @@ header {
 .title-focused .title-underline {
     visibility: visible;
 }
+
+
+
+/*Daynamic Container for formatting text design */
+
+.daynamic-textformat-div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.daynamic-textformat-div i {
+    color: #5f6368;
+    margin: 6px 15px;
+    font-size: 16px;
+
+}
+
+.daynamic-textformat-div i:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.daynamic-textformat-div svg:hover {
+    stroke: #000;
+    cursor: pointer;
+}
