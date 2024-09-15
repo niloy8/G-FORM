@@ -222,7 +222,7 @@ header {
     display: flex;
     align-items: center;
     margin-left: 10px;
-    position: relative;
+
 }
 
 .daynamic-textformat-div i {
@@ -232,6 +232,10 @@ header {
 
 }
 
+.daynamic-textformat-div .svg-container {
+    margin: 6px 15px;
+}
+
 .daynamic-textformat-div i:hover {
     color: black;
     cursor: pointer;
@@ -239,6 +243,9 @@ header {
 
 .daynamic-textformat-div svg:hover {
     stroke: #000;
+}
+
+.daynamic-textformat-div .svg-container:hover {
     cursor: pointer;
 }
 
@@ -247,22 +254,32 @@ header {
     position: relative;
 }
 
-.daynamic-textformat-div i:hover::after,
-.daynamic-textformat-div .svg-container:hover::after {
+.daynamic-textformat-div i::after,
+.daynamic-textformat-div .svg-container::after {
     content: attr(data-tooltip);
     position: absolute;
     font-family: sans-serif;
     top: -34px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(30px);
     background-color: #00000088;
     color: #fff;
     padding: 7px;
     white-space: pre;
     border-radius: 2px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
+    transition: transform 0.4s;
+    opacity: 0;
+
 }
+
+.daynamic-textformat-div i:hover::after,
+.daynamic-textformat-div .svg-container:hover::after {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
 
 .ex {
     position: relative;
@@ -271,17 +288,25 @@ header {
     background: #000;
     padding: 20px;
     margin-top: 20px;
+    cursor: pointer;
 }
 
-.ex:hover::after {
+.ex::after {
     content: "Hello, World!";
     position: absolute;
     top: -35px;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(30px);
+    white-space: pre;
     left: 50%;
     font-size: 10px;
     background: #00000093;
     padding: 2px 30px;
     color: white;
-    cursor: pointer;
+    transition: transform 0.3s;
+    opacity: 0;
+}
+
+.ex:hover::after {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
 }
