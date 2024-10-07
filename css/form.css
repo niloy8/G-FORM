@@ -222,40 +222,25 @@ header {
     display: flex;
     align-items: center;
     margin-left: 10px;
-
-}
-
-.daynamic-textformat-div i {
-    color: #5f6368;
-    margin: 6px 15px;
-    font-size: 16px;
-
-}
-
-.daynamic-textformat-div .svg-container {
-    margin: 6px 15px;
-}
-
-.daynamic-textformat-div i:hover {
-    color: black;
-    cursor: pointer;
-}
-
-.daynamic-textformat-div svg:hover {
-    stroke: #000;
-}
-
-.daynamic-textformat-div .svg-container:hover {
-    cursor: pointer;
 }
 
 .daynamic-textformat-div i,
-.daynamic-textformat-div .svg-container {
+.daynamic-textformat-div ion-icon {
+    color: #5f6368;
+    margin: 6px 15px;
+    font-size: 16px;
+    padding: 0;
+    cursor: pointer;
     position: relative;
 }
 
+.daynamic-textformat-div i:hover,
+.daynamic-textformat-div ion-icon:hover {
+    color: black;
+}
+
 .daynamic-textformat-div i::after,
-.daynamic-textformat-div .svg-container::after {
+.daynamic-textformat-div ion-icon::after {
     content: attr(data-tooltip);
     position: absolute;
     font-family: sans-serif;
@@ -269,17 +254,16 @@ header {
     border-radius: 2px;
     font-size: 10px;
     font-weight: 700;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
     opacity: 0;
-
+    pointer-events: none;
 }
 
 .daynamic-textformat-div i:hover::after,
-.daynamic-textformat-div .svg-container:hover::after {
+.daynamic-textformat-div ion-icon:hover::after {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
-
 
 .ex {
     position: relative;
@@ -302,7 +286,7 @@ header {
     background: #00000093;
     padding: 2px 30px;
     color: white;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
     opacity: 0;
 }
 
