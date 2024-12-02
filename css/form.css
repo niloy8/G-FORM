@@ -18,20 +18,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-
 }
 
 header {
     background-color: white;
 }
 
-
 .hello {
     display: flex;
     align-items: center;
     margin-right: 15px;
     gap: 5px;
-
 }
 
 .other-google-application svg {
@@ -47,7 +44,6 @@ header {
     gap: 5px;
     margin-left: 15px;
     cursor: pointer;
-
 }
 
 .form-icon a {
@@ -61,7 +57,6 @@ header {
 }
 
 .form input {
-    margin-left: 20px;
     font-size: 20px;
     color: #5f6368;
     opacity: 1;
@@ -78,7 +73,6 @@ header {
     justify-content: center;
     gap: 25px;
     padding: 5px;
-
 }
 
 .links h5 {
@@ -107,15 +101,13 @@ header {
     border-radius: 10px;
 }
 
-
 .create-form h3 {
     font-size: medium;
     position: relative;
-
 }
 
 .create-form::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -124,11 +116,10 @@ header {
     background-color: #673ab7;
     z-index: 22;
     border-radius: 7px 7px 0 0;
-
 }
 
 .create-form::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -139,11 +130,9 @@ header {
     visibility: hidden;
 }
 
-
-
-
-.form-description::after {
-    content: "";
+.form-description::after,
+.title-description::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -153,29 +142,36 @@ header {
     border-radius: 10px 0 0 10px;
     visibility: hidden;
 }
-
-
 
 .form-description {
     display: flex;
     flex-direction: column;
-
 }
 
-.form-description input {
+.title {
+    max-width: fit-content;
+    margin-left: 20px;
+}
+
+.title input {
+    width: 100%;
+}
+
+.form-description input,
+.title-description input {
     border: none;
     border-bottom: 1px solid rgba(134, 130, 130, 0.459);
     margin: 15px 0;
     margin-bottom: 5px;
-
 }
 
-.form-description input:first-child {
+.title-description input {
     font-size: 30px;
     padding-bottom: 10px;
 }
 
-.form-description input:focus {
+.form-description input:focus,
+.title-description input:focus {
     outline: none;
     border-bottom: 2px solid #673ab7;
 
@@ -183,15 +179,11 @@ header {
     /* animation: border-grow 400ms ease-in-out; */
 }
 
-
-
 /* creating dynamic sidebar */
 .question-section::before {
     content: '';
     background: none;
 }
-
-
 
 .question-focused::after {
     visibility: visible;
@@ -205,16 +197,18 @@ header {
 
 .title-underline {
     background-color: #673ab7;
-    height: 1.2px;
-    margin-left: 20px;
-    visibility: hidden;
+    height: 2px;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: opacity 300ms, transform 0ms 300ms;
 }
 
 .title-focused .title-underline {
-    visibility: visible;
+    opacity: 1;
+    transform: scaleX(1);
+    transition: opacity 0ms, transform 300ms;
+
 }
-
-
 
 /*Daynamic Container for formatting text design */
 
@@ -222,25 +216,53 @@ header {
     display: flex;
     align-items: center;
     margin-left: 10px;
+    transition: height 0.5s, overflow 0.5s;
+    transition-behavior: allow-discrete;
+    height: 34px;
+    overflow: visible;
 }
 
-.daynamic-textformat-div i,
-.daynamic-textformat-div ion-icon {
+.hide {
+    height: 0px;
+    overflow: hidden;
+}
+
+.daynamic-textformat-div i {
     color: #5f6368;
-    margin: 6px 15px;
+    padding: 6px 10px;
+    margin: 0 5px;
     font-size: 16px;
-    padding: 0;
-    cursor: pointer;
     position: relative;
 }
 
-.daynamic-textformat-div i:hover,
-.daynamic-textformat-div ion-icon:hover {
-    color: black;
+.daynamic-textformat-div .svg-container {
+    display: flex;
+    align-items: center;
+    padding: 4px 10px;
+    margin: 0 5px;
+    position: relative;
 }
 
-.daynamic-textformat-div i::after,
-.daynamic-textformat-div ion-icon::after {
+.daynamic-textformat-div i:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.daynamic-textformat-div svg:hover {
+    fill: #000;
+}
+
+.daynamic-textformat-div .svg-container:hover {
+    cursor: pointer;
+}
+
+.daynamic-textformat-div i,
+.daynamic-textformat-div .svg-container {
+    position: relative;
+}
+
+/* .daynamic-textformat-div i::after,
+.daynamic-textformat-div .svg-container::after {
     content: attr(data-tooltip);
     position: absolute;
     font-family: sans-serif;
@@ -254,43 +276,39 @@ header {
     border-radius: 2px;
     font-size: 10px;
     font-weight: 700;
-    transition: transform 0.5s;
+    transition: transform 0.4s;
     opacity: 0;
+
+} */
+
+.daynamic-textformat-div i:hover::after,
+.daynamic-textformat-div .svg-container:hover::after {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+
+
+
+/* tooltip */
+.feather {
     pointer-events: none;
 }
 
-.daynamic-textformat-div i:hover::after,
-.daynamic-textformat-div ion-icon:hover::after {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-}
-
-.ex {
-    position: relative;
-    height: 8px;
-    width: 50px;
-    background: #000;
-    padding: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.ex::after {
-    content: "Hello, World!";
+.tooltip {
+    pointer-events: none;
+    font-family: sans-serif;
     position: absolute;
-    top: -35px;
-    transform: translateX(-50%) translateY(30px);
-    white-space: pre;
+    display: inline-block;
+    bottom: 100%;
     left: 50%;
+    translate: -50%;
     font-size: 10px;
-    background: #00000093;
-    padding: 2px 30px;
-    color: white;
-    transition: transform 0.5s;
-    opacity: 0;
-}
-
-.ex:hover::after {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
+    background-color: rgba(97, 97, 97, 0.902);
+    font-style: normal;
+    color: #fff;
+    padding: 5px 8px 6px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: opacity 0.3s, translate 0.3s;
 }
