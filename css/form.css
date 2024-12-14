@@ -83,6 +83,7 @@ header {
 }
 
 /* creating a form */
+
 .container {
     background: #a09c9c52;
     display: flex;
@@ -159,6 +160,7 @@ header {
 
 .form-description input,
 .title-description input {
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(134, 130, 130, 0.459);
     margin: 15px 0;
@@ -174,9 +176,6 @@ header {
 .title-description input:focus {
     outline: none;
     border-bottom: 2px solid #673ab7;
-
-    transition: border-bottom 1s ease-in-out;
-    /* animation: border-grow 400ms ease-in-out; */
 }
 
 /* creating dynamic sidebar */

@@ -31,5 +31,3 @@ createForm.forEach(element => {
 window.addEventListener('load', () => {
     handleLoad({ target: createForm[1] });
 });
-
-const div = document.querySelector('.hello');
